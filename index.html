@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -41,7 +42,7 @@
 <h2>Elenque os campos abaixo do Projeto Terapêutico Singular:</h2>
 
 <div class="section">
-    <h3>Questoes Prioritarias - Uso Abusivo de Álcool:</h3>
+    <h3>Questões Prioritárias - Uso Abusivo de Álcool:</h3>
     <div class="campo" onclick="adicionarTexto('Dependencia e abuso do alcool', 'questoesPrioritariasAlcool')">Dependencia e abuso do alcool</div>
     <div class="campo" onclick="adicionarTexto('Abstinencia manifestada por sinais e sintomas de sindrome de abstinencia alcoolica', 'questoesPrioritariasAlcool')">Abstinencia manifestada por sinais e sintomas de sindrome de abstinencia alcoolica</div>
     <div class="campo" onclick="adicionarTexto('Consumo para aliviar ou evitar sintomas de abstinencia', 'questoesPrioritariasAlcool')">Consumo para aliviar ou evitar sintomas de abstinencia</div>
@@ -51,7 +52,7 @@
 </div>
 
 <div class="section">
-    <h3>Questoes Prioritarias - Uso Abusivo de Múltiplas Substâncias:</h3>
+    <h3>Questões Prioritárias - Uso Abusivo de Múltiplas Substâncias:</h3>
     <div class="campo" onclick="adicionarTexto('Baixa adesão/vinculação ao Caps', 'questoesPrioritariasMultipla')">Baixa adesão/vinculação ao Caps</div>
     <div class="campo" onclick="adicionarTexto('Dependencia e abuso de múltiplas SPAS', 'questoesPrioritariasMultipla')">Dependencia e abuso de múltiplas SPAS</div>
     <div class="campo" onclick="adicionarTexto('Situações de vulnerabilidade quando em uso intenso de SPAS', 'questoesPrioritariasMultipla')">Situações de vulnerabilidade quando em uso intenso de SPAS</div>
@@ -107,19 +108,47 @@
 </div>
 
 <script>
-    function adicionarTexto(texto, categoria) {
-        // Seleciona o elemento onde o texto será exibido
-        var resultado = document.getElementById('textoResultado');
+    // Objeto para armazenar os resultados por categoria
+    var resultados = {
+        questoesPrioritariasAlcool: [],
+        questoesPrioritariasMultipla: [],
+        questoesPrioritariasVinculos: [],
+        objetivosCurtoPrazo: [],
+        objetivosMedioPrazo: [],
+        objetivosLongoPrazo: []
+    };
 
-        // Cria o texto do resultado com a nova escolha
-        if (resultado.innerHTML === '') {
-            resultado.innerHTML = '<strong>' + categoria + ':</strong> ' + texto;
-        } else {
-            resultado.innerHTML += '<br><strong>' + categoria + ':</strong> ' + texto;
+    function adicionarTexto(texto, categoria) {
+        // Armazenar os resultados por categoria
+        if (!resultados[categoria]) {
+            resultados[categoria] = [];
         }
         
-        // Exibe a área de resultado, se ainda não estiver visível
+        // Adicionar o texto à categoria
+        resultados[categoria].push(texto);
+        
+        // Atualizar a exibição
+        atualizarResultado();
+    }
+
+    function atualizarResultado() {
+        var resultadoTexto = "";
+        
+        // Iterar sobre as categorias e mostrar os resultados
+        for (var categoria in resultados) {
+            if (resultados[categoria].length > 0) {
+                resultadoTexto += "<strong>" + formatarCategoria(categoria) + ":</strong> " + resultados[categoria].join(", ") + "<br>";
+            }
+        }
+
+        // Exibir os resultados na página
+        document.getElementById('textoResultado').innerHTML = resultadoTexto;
         document.getElementById('resultado').style.display = 'block';
+    }
+
+    function formatarCategoria(categoria) {
+        // Formatar o nome da categoria (ex: 'questoesPrioritariasAlcool' se tornará 'Questões Prioritárias')
+        return categoria.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^./, function(str) { return str.toUpperCase(); });
     }
 </script>
 
