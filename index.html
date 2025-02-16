@@ -1,3 +1,17 @@
+Claro! Vou atualizar os títulos nos resultados para refletir corretamente as mudanças que você mencionou. Aqui está o código ajustado:
+
+### Alterações:
+1. Alterei os títulos dos resultados para:
+   - **Questões prioritárias uso de álcool**
+   - **Questões prioritárias uso de múltiplas**
+   - **Questões prioritárias (vínculos)**
+   - **Objetivos de curto prazo**
+   - **Objetivos de médio prazo**
+   - **Objetivos de longo prazo**
+
+Aqui está o código modificado:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,16 +26,19 @@
             color: #333; /* Cor do texto */
         }
 
+        h2, h3 {
+            color: #000; /* Cor preta para todos os títulos */
+        }
+
         h2 {
             text-align: center;
             font-weight: bold; /* Título em negrito */
             font-size: 1.5em;
-            color: #000; /* Cor preta para o título */
         }
 
         h3 {
             font-weight: bold; /* Títulos das seções em negrito */
-            color: #2e8b57; /* Cor suave para subtítulos */
+            color: #000; /* Cor preta para os subtítulos */
         }
 
         .campo {
@@ -128,12 +145,12 @@
 <script>
     // Objeto para armazenar os resultados por categoria
     var resultados = {
-        questoesPrioritariasUsoAbusivodeAlcool: [],
-        questoesPrioritariasAbusoDeMultiplasSPAS: [],
+        questoesPrioritariasAlcool: [],
+        questoesPrioritariasMultipla: [],
         questoesPrioritariasVinculos: [],
-        objetivosDeCurtoPrazo: [],
-        objetivosDeMedioPrazo: [],
-        objetivosDeLongoPrazo: []
+        objetivosCurtoPrazo: [],
+        objetivosMedioPrazo: [],
+        objetivosLongoPrazo: []
     };
 
     function adicionarTexto(texto, categoria) {
@@ -166,7 +183,15 @@
 
     function formatarCategoria(categoria) {
         // Formatar o nome da categoria (ex: 'questoesPrioritariasAlcool' se tornará 'Questões Prioritárias')
-        return categoria.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^./, function(str) { return str.toUpperCase(); });
+        const categorias = {
+            'questoesPrioritariasAlcool': 'Questões prioritárias uso de álcool',
+            'questoesPrioritariasMultipla': 'Questões prioritárias uso de múltiplas',
+            'questoesPrioritariasVinculos': 'Questões prioritárias (vínculos)',
+            'objetivosCurtoPrazo': 'Objetivos de curto prazo',
+            'objetivosMedioPrazo': 'Objetivos de médio prazo',
+            'objetivosLongoPrazo': 'Objetivos de longo prazo'
+        };
+        return categorias[categoria] || categoria;
     }
 </script>
 
