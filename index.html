@@ -16,7 +16,7 @@
             text-align: center;
             font-weight: bold; /* Título em negrito */
             font-size: 1.5em;
-            color: #2e8b57; /* Cor mais suave para o título */
+            color: #000; /* Cor preta para o título */
         }
 
         h3 {
@@ -57,10 +57,10 @@
 </head>
 <body>
 
-<h2>Elenque os campos abaixo do Projeto Terapêutico Singular:</h2>
+<h2>Projeto Terapêutico Singular (1º semestre de 2025)</h2>
 
 <div class="section">
-    <h3>Questões Prioritárias - Uso Abusivo de Álcool:</h3>
+    <h3>Questões Prioritárias (uso abusivo de álcool):</h3>
     <div class="campo" onclick="adicionarTexto('Dependencia e abuso do alcool', 'questoesPrioritariasAlcool')">Dependencia e abuso do alcool</div>
     <div class="campo" onclick="adicionarTexto('Abstinencia manifestada por sinais e sintomas de sindrome de abstinencia alcoolica', 'questoesPrioritariasAlcool')">Abstinencia manifestada por sinais e sintomas de sindrome de abstinencia alcoolica</div>
     <div class="campo" onclick="adicionarTexto('Consumo para aliviar ou evitar sintomas de abstinencia', 'questoesPrioritariasAlcool')">Consumo para aliviar ou evitar sintomas de abstinencia</div>
@@ -70,7 +70,7 @@
 </div>
 
 <div class="section">
-    <h3>Questões Prioritárias - Uso Abusivo de Múltiplas Substâncias:</h3>
+    <h3>Questões Prioritárias (uso abusivo de múltiplas substâncias psicoativas):</h3>
     <div class="campo" onclick="adicionarTexto('Baixa adesão/vinculação ao Caps', 'questoesPrioritariasMultipla')">Baixa adesão/vinculação ao Caps</div>
     <div class="campo" onclick="adicionarTexto('Dependencia e abuso de múltiplas SPAS', 'questoesPrioritariasMultipla')">Dependencia e abuso de múltiplas SPAS</div>
     <div class="campo" onclick="adicionarTexto('Situações de vulnerabilidade quando em uso intenso de SPAS', 'questoesPrioritariasMultipla')">Situações de vulnerabilidade quando em uso intenso de SPAS</div>
@@ -85,7 +85,7 @@
 </div>
 
 <div class="section">
-    <h3>Questões Prioritárias - Vínculos e Relações:</h3>
+    <h3>Questões Prioritárias (vínculos e relações):</h3>
     <div class="campo" onclick="adicionarTexto('Vinculo familiar fragilizado', 'questoesPrioritariasVinculos')">Vinculo familiar fragilizado</div>
     <div class="campo" onclick="adicionarTexto('Crise na dinamica familiar', 'questoesPrioritariasVinculos')">Crise na dinamica familiar</div>
     <div class="campo" onclick="adicionarTexto('Sobrecarga envolvendo o cuidado familiar', 'questoesPrioritariasVinculos')">Sobrecarga envolvendo o cuidado familiar</div>
@@ -105,4 +105,70 @@
 <div class="section">
     <h3>Objetivos de Médio Prazo:</h3>
     <div class="campo" onclick="adicionarTexto('Construir práticas de cuidado que façam mediações nos territórios de vida', 'objetivosMedioPrazo')">Construir práticas de cuidado que façam mediações nos territórios de vida</div>
-    <
+    <div class="campo" onclick="adicionarTexto('Retomada de vinculos', 'objetivosMedioPrazo')">Retomada de vinculos</div>
+    <div class="campo" onclick="adicionarTexto('Pensar práticas que favoreçam a autonomia, ainda que em pequenas ações', 'objetivosMedioPrazo')">Pensar práticas que favoreçam a autonomia, ainda que em pequenas ações</div>
+    <div class="campo" onclick="adicionarTexto('Práticas de cuidado que envolvam tecnologias leves: acolhimento, vínculo, escuta', 'objetivosMedioPrazo')">Práticas de cuidado que envolvam tecnologias leves: acolhimento, vínculo, escuta</div>
+    <div class="campo" onclick="adicionarTexto('Pensar na retomada de atividades remuneradas', 'objetivosMedioPrazo')">Pensar na retomada de atividades remuneradas</div>
+</div>
+
+<div class="section">
+    <h3>Objetivos de Longo Prazo:</h3>
+    <div class="campo" onclick="adicionarTexto('Manutencao da abstinencia de alcool a longo prazo', 'objetivosLongoPrazo')">Manutencao da abstinencia de alcool a longo prazo</div>
+    <div class="campo" onclick="adicionarTexto('Melhora da saude fisica relacionada ao uso de alcool', 'objetivosLongoPrazo')">Melhora da saude fisica relacionada ao uso de alcool</div>
+    <div class="campo" onclick="adicionarTexto('Fortalecimento da saude mental no tratamento do abuso de substancias', 'objetivosLongoPrazo')">Fortalecimento da saude mental no tratamento do abuso de substancias</div>
+    <div class="campo" onclick="adicionarTexto('Reintegracao social e profissional ao mercado de trabalho', 'objetivosLongoPrazo')">Reintegracao social e profissional ao mercado de trabalho</div>
+    <div class="campo" onclick="adicionarTexto('Reducao dos riscos associados ao uso de substancias', 'objetivosLongoPrazo')">Reducao dos riscos associados ao uso de substancias</div>
+</div>
+
+<div class="resultado" id="resultado">
+    <h3>Campos elencados:</h3>
+    <p id="textoResultado"></p>
+</div>
+
+<script>
+    // Objeto para armazenar os resultados por categoria
+    var resultados = {
+        questoesPrioritariasAlcool: [],
+        questoesPrioritariasMultipla: [],
+        questoesPrioritariasVinculos: [],
+        objetivosCurtoPrazo: [],
+        objetivosMedioPrazo: [],
+        objetivosLongoPrazo: []
+    };
+
+    function adicionarTexto(texto, categoria) {
+        // Armazenar os resultados por categoria
+        if (!resultados[categoria]) {
+            resultados[categoria] = [];
+        }
+        
+        // Adicionar o texto à categoria
+        resultados[categoria].push(texto);
+        
+        // Atualizar a exibição
+        atualizarResultado();
+    }
+
+    function atualizarResultado() {
+        var resultadoTexto = "";
+        
+        // Iterar sobre as categorias e mostrar os resultados
+        for (var categoria in resultados) {
+            if (resultados[categoria].length > 0) {
+                resultadoTexto += "<strong>" + formatarCategoria(categoria) + ":</strong> " + resultados[categoria].join(", ") + "<br>";
+            }
+        }
+
+        // Exibir os resultados na página
+        document.getElementById('textoResultado').innerHTML = resultadoTexto;
+        document.getElementById('resultado').style.display = 'block';
+    }
+
+    function formatarCategoria(categoria) {
+        // Formatar o nome da categoria (ex: 'questoesPrioritariasAlcool' se tornará 'Questões Prioritárias')
+        return categoria.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^./, function(str) { return str.toUpperCase(); });
+    }
+</script>
+
+</body>
+</html>
