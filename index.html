@@ -56,12 +56,6 @@
         .section {
             margin-bottom: 20px;
         }
-
-        .campo-final {
-            margin-top: 10px;
-            font-weight: bold;
-            color: #000;
-        }
     </style>
 </head>
 <body>
@@ -69,37 +63,90 @@
 <h2>Projeto Terapêutico Singular (1º semestre de 2025)</h2>
 
 <div class="section">
-    <h3>Questões Prioritárias - Vulnerabilidade Social:</h3>
-    <div class="campo" onclick="adicionarTexto('Exposição a condições de moradia precária ou sem-teto', 'questoesPrioritariasVulnerabilidade')">Exposição a condições de moradia precária ou sem-teto</div>
-    <div class="campo" onclick="adicionarTexto('Desemprego e exclusão do mercado de trabalho', 'questoesPrioritariasVulnerabilidade')">Desemprego e exclusão do mercado de trabalho</div>
-    <div class="campo" onclick="adicionarTexto('Violência doméstica e/ou abuso', 'questoesPrioritariasVulnerabilidade')">Violência doméstica e/ou abuso</div>
-    <div class="campo" onclick="adicionarTexto('Falta de rede de apoio e isolamento social', 'questoesPrioritariasVulnerabilidade')">Falta de rede de apoio e isolamento social</div>
-    <div class="campo" onclick="adicionarTexto('Exposição a ambientes de risco e violência urbana', 'questoesPrioritariasVulnerabilidade')">Exposição a ambientes de risco e violência urbana</div>
-    <div class="campo" onclick="adicionarTexto('Acesso limitado a serviços de saúde e apoio psicossocial', 'questoesPrioritariasVulnerabilidade')">Acesso limitado a serviços de saúde e apoio psicossocial</div>
-    <div class="campo" onclick="adicionarTexto('Histórico de abuso sexual ou outras violências traumáticas', 'questoesPrioritariasVulnerabilidade')">Histórico de abuso sexual ou outras violências traumáticas</div>
-    <div class="campo" onclick="adicionarTexto('Carência de educação e qualificação profissional', 'questoesPrioritariasVulnerabilidade')">Carência de educação e qualificação profissional</div>
-    <div class="campo" onclick="adicionarTexto('Desintegração familiar e falta de apoio emocional', 'questoesPrioritariasVulnerabilidade')">Desintegração familiar e falta de apoio emocional</div>
-    <div class="campo" onclick="adicionarTexto('Estigma e discriminação social', 'questoesPrioritariasVulnerabilidade')">Estigma e discriminação social</div>
-    <div class="campo" onclick="adicionarTexto('Exclusão do mercado de trabalho e precarização das condições laborais', 'questoesPrioritariasVulnerabilidade')">Exclusão do mercado de trabalho e precarização das condições laborais</div>
-    <div class="campo" onclick="adicionarTexto('Dependência de redes de apoio informais e precárias', 'questoesPrioritariasVulnerabilidade')">Dependência de redes de apoio informais e precárias</div>
-    <div class="campo" onclick="adicionarTexto('Falta de moradia digna e condições inadequadas de vida', 'questoesPrioritariasVulnerabilidade')">Falta de moradia digna e condições inadequadas de vida</div>
-    <div class="campo" onclick="adicionarTexto('Acesso restrito a programas de reintegração social e de redução de danos', 'questoesPrioritariasVulnerabilidade')">Acesso restrito a programas de reintegração social e de redução de danos</div>
-    <div class="campo" onclick="adicionarTexto('Aumento da violência comunitária e insegurança social', 'questoesPrioritariasVulnerabilidade')">Aumento da violência comunitária e insegurança social</div>
+    <h3>Questões Prioritárias - Uso Abusivo de Álcool:</h3>
+    <div class="campo" onclick="adicionarTexto('Dependência e abuso do álcool', 'questoesPrioritariasAlcool')">Dependência e abuso do álcool</div>
+    <div class="campo" onclick="adicionarTexto('Abstinência manifestada por sinais e sintomas de síndrome de abstinência alcoólica', 'questoesPrioritariasAlcool')">Abstinência manifestada por sinais e sintomas de síndrome de abstinência alcoólica</div>
+    <div class="campo" onclick="adicionarTexto('Consumo para aliviar ou evitar sintomas de abstinência', 'questoesPrioritariasAlcool')">Consumo para aliviar ou evitar sintomas de abstinência</div>
+    <div class="campo" onclick="adicionarTexto('Cuidados relacionados a SAA que envolvem medicação e controle de sinais', 'questoesPrioritariasAlcool')">Cuidados relacionados a SAA que envolvem medicação e controle de sinais</div>
+    <div class="campo" onclick="adicionarTexto('Desejo de diminuir padrão de consumo de bebida alcoólica', 'questoesPrioritariasAlcool')">Desejo de diminuir padrão de consumo de bebida alcoólica</div>
+    <div class="campo" onclick="adicionarTexto('Necessidade de abstinência de bebida alcoólica por questões clínicas', 'questoesPrioritariasAlcool')">Necessidade de abstinência de bebida alcoólica por questões clínicas</div>
+    <div class="campo" onclick="adicionarTexto('Uso abusivo de bebida alcoólica implicando em questões interpessoais e/ou de trabalho', 'questoesPrioritariasAlcool')">Uso abusivo de bebida alcoólica implicando em questões interpessoais e/ou de trabalho</div>
 </div>
 
-<!-- Outras seções que você já tinha no seu código... -->
+<div class="section">
+    <h3>Questões Prioritárias - Uso Abusivo de uma ou de múltiplas SPAS:</h3>
+    <div class="campo" onclick="adicionarTexto('Uso abusivo de crack', 'questoesPrioritariasMultipla')">Uso abusivo de crack</div>
+    <div class="campo" onclick="adicionarTexto('Uso abusivo de cocaína', 'questoesPrioritariasMultipla')">Uso abusivo de cocaína</div>
+    <div class="campo" onclick="adicionarTexto('Uso abusivo de maconha', 'questoesPrioritariasMultipla')">Uso abusivo de maconha</div>
+    <div class="campo" onclick="adicionarTexto('Dependência e abuso de múltiplas SPAs', 'questoesPrioritariasMultipla')">Dependência e abuso de múltiplas SPAs</div>
+    <div class="campo" onclick="adicionarTexto('Baixa adesão/vinculação ao Caps', 'questoesPrioritariasMultipla')">Baixa adesão/vinculação ao Caps</div>
+    <div class="campo" onclick="adicionarTexto('Situações de vulnerabilidade quando em uso intenso de SPAs', 'questoesPrioritariasMultipla')">Situações de vulnerabilidade quando em uso intenso de SPAs</div>
+    <div class="campo" onclick="adicionarTexto('Abandono de atividades sociais e ocupacionais em virtude do uso de SPAs', 'questoesPrioritariasMultipla')">Abandono de atividades sociais e ocupacionais em virtude do uso de SPAs</div>
+    <div class="campo" onclick="adicionarTexto('Vulnerabilidade social', 'questoesPrioritariasMultipla')">Vulnerabilidade social</div>
+    <div class="campo" onclick="adicionarTexto('Exposição a violências', 'questoesPrioritariasMultipla')">Exposição a violências</div>
+    <div class="campo" onclick="adicionarTexto('Riscos e exposições no território', 'questoesPrioritariasMultipla')">Riscos e exposições no território</div>
+    <div class="campo" onclick="adicionarTexto('Uso recorrente da substância resultando no fracasso em cumprir obrigações', 'questoesPrioritariasMultipla')">Uso recorrente da substância resultando no fracasso em cumprir obrigações</div>
+    <div class="campo" onclick="adicionarTexto('Uso intenso de SPAs agudizando quadro psiquiátrico de base', 'questoesPrioritariasMultipla')">Uso intenso de SPAs agudizando quadro psiquiátrico de base</div>
+    <div class="campo" onclick="adicionarTexto('Problemas legais recorrentes relacionados à substância', 'questoesPrioritariasMultipla')">Problemas legais recorrentes relacionados à substância</div>
+    <div class="campo" onclick="adicionarTexto('Uso continuado da substância apesar de problemas sociais ou interpessoais', 'questoesPrioritariasMultipla')">Uso continuado da substância apesar de problemas sociais ou interpessoais</div>
+</div>
+
+<div class="section">
+    <h3>Questões Prioritárias - Vínculos e Relações:</h3>
+    <div class="campo" onclick="adicionarTexto('Vínculo familiar fragilizado', 'questoesPrioritariasVinculos')">Vínculo familiar fragilizado</div>
+    <div class="campo" onclick="adicionarTexto('Crise na dinâmica familiar', 'questoesPrioritariasVinculos')">Crise na dinâmica familiar</div>
+    <div class="campo" onclick="adicionarTexto('Sobrecarga envolvendo o cuidado familiar', 'questoesPrioritariasVinculos')">Sobrecarga envolvendo o cuidado familiar</div>
+    <div class="campo" onclick="adicionarTexto('Questões envolvendo a solidão e/ou solitude', 'questoesPrioritariasVinculos')">Questões envolvendo a solidão e/ou solitude</div>
+    <div class="campo" onclick="adicionarTexto('Dificuldade em manter relações interpessoais e vínculos fragilizados', 'questoesPrioritariasVinculos')">Dificuldade em manter relações interpessoais e vínculos fragilizados</div>
+</div>
+
+<div class="section">
+    <h3>Objetivos de Curto Prazo:</h3>
+    <div class="campo" onclick="adicionarTexto('Construir cuidado pautado nas práticas de redução de danos', 'objetivosCurtoPrazo')">Construir cuidado pautado nas práticas de redução de danos</div>
+    <div class="campo" onclick="adicionarTexto('Manutenção da proposta de cuidado em redução de danos', 'objetivosCurtoPrazo')">Manutenção da proposta de cuidado em redução de danos</div>
+    <div class="campo" onclick="adicionarTexto('Construir espaços em que o usuário possa problematizar o consumo de SPAs', 'objetivosCurtoPrazo')">Construir espaços em que o usuário possa problematizar o consumo de SPAs</div>
+    <div class="campo" onclick="adicionarTexto('Vinculação com o serviço para a construção de cuidados pertinentes ao quadro', 'objetivosCurtoPrazo')">Vinculação com o serviço para a construção de cuidados pertinentes ao quadro</div>
+    <div class="campo" onclick="adicionarTexto('Acolher usuário, uso e seu sofrimento', 'objetivosCurtoPrazo')">Acolher usuário, uso e seu sofrimento</div>
+    <div class="campo" onclick="adicionarTexto('Ressaltar a subjetividade e singularidade na construção do cuidado e na elaboração do PTS', 'objetivosCurtoPrazo')">Ressaltar a subjetividade e singularidade na construção do cuidado e na elaboração do PTS</div>
+    <div class="campo" onclick="adicionarTexto('Auxiliar nos encaminhamentos e facilitar a construção de rede', 'objetivosCurtoPrazo')">Auxiliar nos encaminhamentos e facilitar a construção de rede</div>
+</div>
+
+<div class="section">
+    <h3>Objetivos de Médio Prazo:</h3>
+    <div class="campo" onclick="adicionarTexto('Construir práticas de cuidado que façam mediações nos territórios de vida', 'objetivosMedioPrazo')">Construir práticas de cuidado que façam mediações nos territórios de vida</div>
+    <div class="campo" onclick="adicionarTexto('Retomada de vínculos', 'objetivosMedioPrazo')">Retomada de vínculos</div>
+    <div class="campo" onclick="adicionarTexto('Pensar práticas que favoreçam a autonomia, ainda que em pequenas ações', 'objetivosMedioPrazo')">Pensar práticas que favoreçam a autonomia, ainda que em pequenas ações</div>
+    <div class="campo" onclick="adicionarTexto('Práticas de cuidado que envolvam tecnologias leves: acolhimento, vínculo, escuta', 'objetivosMedioPrazo')">Práticas de cuidado que envolvam tecnologias leves: acolhimento, vínculo, escuta</div>
+    <div class="campo" onclick="adicionarTexto('Pensar na retomada de atividades remuneradas', 'objetivosMedioPrazo')">Pensar na retomada de atividades remuneradas</div>
+    <div class="campo" onclick="adicionarTexto('Pensar formas de organizar atividades de vida diária e/ou atividades instrumentais de vida diárias prejudicadas pelo uso abusivo de SPAS', 'objetivosMedioPrazo')">Pensar formas de organizar atividades de vida diária e/ou atividades instrumentais de vida diárias prejudicadas pelo uso abusivo de SPAS</div>
+    <div class="campo" onclick="adicionarTexto('Auxiliar usuário na ampliação de fatores protetivos: aqueles capazes de promover saúde', 'objetivosMedioPrazo')">Auxiliar usuário na ampliação de fatores protetivos: aqueles capazes de promover saúde</div>
+    <div class="campo" onclick="adicionarTexto('Ampliar rede sócio assistencial', 'objetivosMedioPrazo')">Ampliar rede sócio assistencial</div>
+    <div class="campo" onclick="adicionarTexto('Cuidar abrangendo a integralidade na assistência à saúde: unindo ações preventivas, curativas e de reabilitação', 'objetivosMedioPrazo')">Cuidar abrangendo a integralidade na assistência à saúde: unindo ações preventivas, curativas e de reabilitação</div>
+</div>
+
+<div class="section">
+    <h3>Objetivos de Longo Prazo:</h3>
+    <div class="campo" onclick="adicionarTexto('Manutenção da abstinência de álcool a longo prazo', 'objetivosLongoPrazo')">Manutenção da abstinência de álcool a longo prazo</div>
+    <div class="campo" onclick="adicionarTexto('Melhora da saúde física relacionada ao uso de álcool', 'objetivosLongoPrazo')">Melhora da saúde física relacionada ao uso de álcool</div>
+    <div class="campo" onclick="adicionarTexto('Fortalecimento da saúde mental no tratamento do abuso de substâncias', 'objetivosLongoPrazo')">Fortalecimento da saúde mental no tratamento do abuso de substâncias</div>
+    <div class="campo" onclick="adicionarTexto('Reintegração social e profissional ao mercado de trabalho', 'objetivosLongoPrazo')">Reintegração social e profissional ao mercado de trabalho</div>
+    <div class="campo" onclick="adicionarTexto('Redução dos riscos associados ao uso de substâncias', 'objetivosLongoPrazo')">Redução dos riscos associados ao uso de substâncias</div>
+</div>
 
 <div class="resultado" id="resultado">
     <h3>Campos elencados:</h3>
     <p id="textoResultado"></p>
-    <div class="campo-final">Reavaliação em seis meses</div>
 </div>
 
 <script>
     // Objeto para armazenar os resultados por categoria
     var resultados = {
-        questoesPrioritariasVulnerabilidade: [],
-        // Outras categorias...
+        questoesPrioritariasAlcool: [],
+        questoesPrioritariasMultipla: [],
+        questoesPrioritariasVinculos: [],
+        objetivosCurtoPrazo: [],
+        objetivosMedioPrazo: [],
+        objetivosLongoPrazo: []
     };
 
     function adicionarTexto(texto, categoria) {
@@ -117,26 +164,42 @@
 
     function atualizarResultado() {
         var resultadoTexto = "";
+
+        // Adicionar as questões prioritárias agrupadas sob "QUESTÕES PRIORITÁRIAS"
+        var questoesPrioritarias = [
+            resultados.questoesPrioritariasAlcool,
+            resultados.questoesPrioritariasMultipla,
+            resultados.questoesPrioritariasVinculos
+        ];
+
+        var questoesAgrupadas = [];
         
-        // Iterar sobre as categorias e mostrar os resultados
-        for (var categoria in resultados) {
-            if (resultados[categoria].length > 0) {
-                resultadoTexto += "<strong>" + formatarCategoria(categoria) + ":</strong> " + resultados[categoria].join(", ") + "<br>";
-            }
+        // Agrupar todas as questões prioritárias
+        for (var i = 0; i < questoesPrioritarias.length; i++) {
+            questoesAgrupadas = questoesAgrupadas.concat(questoesPrioritarias[i]);
+        }
+        
+        // Exibir as questões prioritárias, se houver alguma
+        if (questoesAgrupadas.length > 0) {
+            resultadoTexto += "<strong>QUESTÕES PRIORITÁRIAS:</strong> " + questoesAgrupadas.join(", ") + "<br>";
+        }
+
+        // Exibir os objetivos de curto, médio e longo prazo separadamente
+        if (resultados.objetivosCurtoPrazo.length > 0) {
+            resultadoTexto += "<strong>Objetivos de curto prazo:</strong> " + resultados.objetivosCurtoPrazo.join(", ") + "<br>";
+        }
+
+        if (resultados.objetivosMedioPrazo.length > 0) {
+            resultadoTexto += "<strong>Objetivos de médio prazo:</strong> " + resultados.objetivosMedioPrazo.join(", ") + "<br>";
+        }
+
+        if (resultados.objetivosLongoPrazo.length > 0) {
+            resultadoTexto += "<strong>Objetivos de longo prazo:</strong> " + resultados.objetivosLongoPrazo.join(", ") + "<br>";
         }
 
         // Exibir os resultados na página
         document.getElementById('textoResultado').innerHTML = resultadoTexto;
         document.getElementById('resultado').style.display = 'block';
-    }
-
-    function formatarCategoria(categoria) {
-        // Formatar o nome da categoria (ex: 'questoesPrioritariasVulnerabilidade' se tornará 'Questões Prioritárias Vulnerabilidade')
-        const categorias = {
-            'questoesPrioritariasVulnerabilidade': 'Questões Prioritárias Vulnerabilidade Social',
-            // Outras categorias...
-        };
-        return categorias[categoria] || categoria;
     }
 </script>
 
