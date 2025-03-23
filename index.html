@@ -101,6 +101,25 @@
 </div>
 
 <div class="section">
+    <h3>Questões Prioritárias - Vulnerabilidade:</h3>
+    <div class="campo" onclick="adicionarTexto('Acesso e qualidade dos serviços de saúde mental', 'questoesPrioritariasVulnerabilidade')">Acesso e qualidade dos serviços de saúde mental</div>
+    <div class="campo" onclick="adicionarTexto('Redução do estigma social e discriminação', 'questoesPrioritariasVulnerabilidade')">Redução do estigma social e discriminação</div>
+    <div class="campo" onclick="adicionarTexto('Apoio à reintegração social e inserção no mercado de trabalho', 'questoesPrioritariasVulnerabilidade')">Apoio à reintegração social e inserção no mercado de trabalho</div>
+    <div class="campo" onclick="adicionarTexto('Garantia de condições dignas de moradia e segurança', 'questoesPrioritariasVulnerabilidade')">Garantia de condições dignas de moradia e segurança</div>
+    <div class="campo" onclick="adicionarTexto('Fortalecimento da rede de apoio social e familiar', 'questoesPrioritariasVulnerabilidade')">Fortalecimento da rede de apoio social e familiar</div>
+    <div class="campo" onclick="adicionarTexto('Enfrentamento da violência doméstica e abuso', 'questoesPrioritariasVulnerabilidade')">Enfrentamento da violência doméstica e abuso</div>
+    <div class="campo" onclick="adicionarTexto('Acesso a tratamentos especializados e programas de reabilitação', 'questoesPrioritariasVulnerabilidade')">Acesso a tratamentos especializados e programas de reabilitação</div>
+    <div class="campo" onclick="adicionarTexto('Promoção da educação e programas de capacitação profissional', 'questoesPrioritariasVulnerabilidade')">Promoção da educação e programas de capacitação profissional</div>
+    <div class="campo" onclick="adicionarTexto('Garantia de segurança alimentar e nutrição adequada', 'questoesPrioritariasVulnerabilidade')">Garantia de segurança alimentar e nutrição adequada</div>
+    <div class="campo" onclick="adicionarTexto('Apoio legal e direitos civis', 'questoesPrioritariasVulnerabilidade')">Apoio legal e direitos civis</div>
+    <div class="campo" onclick="adicionarTexto('Prevenção de recaídas e acompanhamento contínuo', 'questoesPrioritariasVulnerabilidade')">Prevenção de recaídas e acompanhamento contínuo</div>
+    <div class="campo" onclick="adicionarTexto('Apoio a crianças e dependentes em situações de vulnerabilidade', 'questoesPrioritariasVulnerabilidade')">Apoio a crianças e dependentes em situações de vulnerabilidade</div>
+    <div class="campo" onclick="adicionarTexto('Promoção de políticas públicas inclusivas e de assistência social', 'questoesPrioritariasVulnerabilidade')">Promoção de políticas públicas inclusivas e de assistência social</div>
+    <div class="campo" onclick="adicionarTexto('Gestão de comorbidades físicas e psíquicas', 'questoesPrioritariasVulnerabilidade')">Gestão de comorbidades físicas e psíquicas</div>
+    <div class="campo" onclick="adicionarTexto('Desenvolvimento de estratégias de conscientização comunitária', 'questoesPrioritariasVulnerabilidade')">Desenvolvimento de estratégias de conscientização comunitária</div>
+</div>
+
+<div class="section">
     <h3>Objetivos de Curto Prazo:</h3>
     <div class="campo" onclick="adicionarTexto('Construir cuidado pautado nas práticas de redução de danos', 'objetivosCurtoPrazo')">Construir cuidado pautado nas práticas de redução de danos</div>
     <div class="campo" onclick="adicionarTexto('Manutenção da proposta de cuidado em redução de danos', 'objetivosCurtoPrazo')">Manutenção da proposta de cuidado em redução de danos</div>
@@ -144,6 +163,7 @@
         questoesPrioritariasAlcool: [],
         questoesPrioritariasMultipla: [],
         questoesPrioritariasVinculos: [],
+        questoesPrioritariasVulnerabilidade
         objetivosCurtoPrazo: [],
         objetivosMedioPrazo: [],
         objetivosLongoPrazo: []
@@ -169,7 +189,8 @@
         var questoesPrioritarias = [
             resultados.questoesPrioritariasAlcool,
             resultados.questoesPrioritariasMultipla,
-            resultados.questoesPrioritariasVinculos
+            resultados.questoesPrioritariasVinculos,
+            resultados.questoesPrioritariasVulnerabilidade
         ];
 
         var questoesAgrupadas = [];
