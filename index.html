@@ -1,3 +1,6 @@
+Aqui está o código HTML completo, conforme solicitado:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -42,6 +45,17 @@
         .campo:hover {
             background-color: #c8e6c9; /* Cor do fundo ao passar o mouse */
             transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+        }
+
+        .campo-texto {
+            width: 100%;
+            height: 120px;
+            padding: 12px;
+            border: 1px solid #a9d18e;
+            background-color: #e1f5e1;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
         }
 
         .resultado {
@@ -108,73 +122,29 @@
 <div class="section">
     <h3>Questões Prioritárias - Vulnerabilidade:</h3>
     <div class="campo" onclick="adicionarTexto('Acesso e qualidade dos serviços de saúde mental', 'questoesPrioritariasVulnerabilidade')">Acesso e qualidade dos serviços de saúde mental</div>
-    <div class="campo" onclick="adicionarTexto('Redução do estigma social e discriminação', 'questoesPrioritariasVulnerabilidade')">Redução do estigma social e discriminação</div>
-    <div class="campo" onclick="adicionarTexto('Apoio à reintegração social e inserção no mercado de trabalho', 'questoesPrioritariasVulnerabilidade')">Apoio à reintegração social e inserção no mercado de trabalho</div>
-    <div class="campo" onclick="adicionarTexto('Garantia de condições dignas de moradia e segurança', 'questoesPrioritariasVulnerabilidade')">Garantia de condições dignas de moradia e segurança</div>
-    <div class="campo" onclick="adicionarTexto('Fortalecimento da rede de apoio social e familiar', 'questoesPrioritariasVulnerabilidade')">Fortalecimento da rede de apoio social e familiar</div>
-    <div class="campo" onclick="adicionarTexto('Enfrentamento da violência doméstica e abuso', 'questoesPrioritariasVulnerabilidade')">Enfrentamento da violência doméstica e abuso</div>
-    <div class="campo" onclick="adicionarTexto('Acesso a tratamentos especializados e programas de reabilitação', 'questoesPrioritariasVulnerabilidade')">Acesso a tratamentos especializados e programas de reabilitação</div>
-    <div class="campo" onclick="adicionarTexto('Promoção da educação e programas de capacitação profissional', 'questoesPrioritariasVulnerabilidade')">Promoção da educação e programas de capacitação profissional</div>
-    <div class="campo" onclick="adicionarTexto('Garantia de segurança alimentar e nutrição adequada', 'questoesPrioritariasVulnerabilidade')">Garantia de segurança alimentar e nutrição adequada</div>
-    <div class="campo" onclick="adicionarTexto('Apoio legal e direitos civis', 'questoesPrioritariasVulnerabilidade')">Apoio legal e direitos civis</div>
-    <div class="campo" onclick="adicionarTexto('Prevenção de recaídas e acompanhamento contínuo', 'questoesPrioritariasVulnerabilidade')">Prevenção de recaídas e acompanhamento contínuo</div>
-    <div class="campo" onclick="adicionarTexto('Apoio a crianças e dependentes em situações de vulnerabilidade', 'questoesPrioritariasVulnerabilidade')">Apoio a crianças e dependentes em situações de vulnerabilidade</div>
-    <div class="campo" onclick="adicionarTexto('Promoção de políticas públicas inclusivas e de assistência social', 'questoesPrioritariasVulnerabilidade')">Promoção de políticas públicas inclusivas e de assistência social</div>
-    <div class="campo" onclick="adicionarTexto('Gestão de comorbidades físicas e psíquicas', 'questoesPrioritariasVulnerabilidade')">Gestão de comorbidades físicas e psíquicas</div>
-    <div class="campo" onclick="adicionarTexto('Desenvolvimento de estratégias de conscientização comunitária', 'questoesPrioritariasVulnerabilidade')">Desenvolvimento de estratégias de conscientização comunitária</div>
+    <div class="campo" onclick="adicionarTexto('Redução do estigma social e discriminação', 'questoesPrioritariasVulnerabilidade')">Redução do estigma social e discrim
+
+inação</div>
+    <div class="campo" onclick="adicionarTexto('Vulnerabilidade frente ao consumo de substâncias psicoativas (SPAs)', 'questoesPrioritariasVulnerabilidade')">Vulnerabilidade frente ao consumo de substâncias psicoativas (SPAs)</div>
+    <div class="campo" onclick="adicionarTexto('Vulnerabilidade econômica', 'questoesPrioritariasVulnerabilidade')">Vulnerabilidade econômica</div>
+    <div class="campo" onclick="adicionarTexto('Situações de risco de violência e/ou criminalidade', 'questoesPrioritariasVulnerabilidade')">Situações de risco de violência e/ou criminalidade</div>
 </div>
 
 <div class="section">
     <h3>Objetivos de Curto Prazo:</h3>
-    <div class="campo" onclick="adicionarTexto('Construir cuidado pautado nas práticas de redução de danos', 'objetivosCurtoPrazo')">Construir cuidado pautado nas práticas de redução de danos</div>
-    <div class="campo" onclick="adicionarTexto('Manutenção da proposta de cuidado em redução de danos', 'objetivosCurtoPrazo')">Manutenção da proposta de cuidado em redução de danos</div>
-    <div class="campo" onclick="adicionarTexto('Construir espaços em que o usuário possa problematizar o consumo de SPAs', 'objetivosCurtoPrazo')">Construir espaços em que o usuário possa problematizar o consumo de SPAs</div>
-    <div class="campo" onclick="adicionarTexto('Vinculação com o serviço para a construção de cuidados pertinentes ao quadro', 'objetivosCurtoPrazo')">Vinculação com o serviço para a construção de cuidados pertinentes ao quadro</div>
-    <div class="campo" onclick="adicionarTexto('Acolher usuário, uso e seu sofrimento', 'objetivosCurtoPrazo')">Acolher usuário, uso e seu sofrimento</div>
-    <div class="campo" onclick="adicionarTexto('Ressaltar a subjetividade e singularidade na construção do cuidado e na elaboração do PTS', 'objetivosCurtoPrazo')">Ressaltar a subjetividade e singularidade na construção do cuidado e na elaboração do PTS</div>
-    <div class="campo" onclick="adicionarTexto('Auxiliar nos encaminhamentos e facilitar a construção de rede', 'objetivosCurtoPrazo')">Auxiliar nos encaminhamentos e facilitar a construção de rede</div>
-    <div class="campo" onclick="adicionarTexto('Apoiar o início do processo de abstinência ou redução do uso de substâncias psicoativas (SPAs)', 'objetivosCurtoPrazo')">Apoiar o início do processo de abstinência ou redução do uso de substâncias psicoativas (SPAs).</div>
-    <div class="campo" onclick="adicionarTexto('Identificar e envolver a rede de apoio (família, amigos, comunidade) no processo de cuidado', 'objetivosCurtoPrazo')">Identificar e envolver a rede de apoio (família, amigos, comunidade) no processo de cuidado</div>
-    <div class="campo" onclick="adicionarTexto('Proporcionar um ambiente seguro e acolhedor para expressar o sofrimento e as dificuldades', 'objetivosCurtoPrazo')">Proporcionar um ambiente seguro e acolhedor para expressar o sofrimento e as dificuldades</div>
-    <div class="campo" onclick="adicionarTexto('Promover o estabelecimento de hábitos de autocuidado, como alimentação saudável e práticas de higiene', 'objetivosCurtoPrazo')">Promover o estabelecimento de hábitos de autocuidado, como alimentação saudável e práticas de higiene</div>
-    <div class="campo" onclick="adicionarTexto('Realizar um diagnóstico inicial e definir as necessidades específicas do paciente', 'objetivosCurtoPrazo')">Realizar um diagnóstico inicial e definir as necessidades específicas do paciente</div>
-    <div class="campo" onclick="adicionarTexto('Propor ações imediatas de acolhimento e apoio emocional para iniciar a redução do estigma relacionado ao uso de substâncias', 'objetivosCurtoPrazo')">Propor ações imediatas de acolhimento e apoio emocional para iniciar a redução do estigma relacionado ao uso de substâncias</div>
+    <div class="campo" onclick="adicionarTexto('Encaminhamento para CAPS', 'objetivosCurtoPrazo')">Encaminhamento para CAPS</div>
+    <div class="campo" onclick="adicionarTexto('Intervenção em crises', 'objetivosCurtoPrazo')">Intervenção em crises</div>
 </div>
 
 <div class="section">
     <h3>Objetivos de Médio Prazo:</h3>
-    <div class="campo" onclick="adicionarTexto('Construir práticas de cuidado que façam mediações nos territórios de vida', 'objetivosMedioPrazo')">Construir práticas de cuidado que façam mediações nos territórios de vida</div>
-    <div class="campo" onclick="adicionarTexto('Retomada de vínculos', 'objetivosMedioPrazo')">Retomada de vínculos</div>
-    <div class="campo" onclick="adicionarTexto('Garantir que o usuário não esteja em risco', 'objetivosMedioPrazo')">Garantir que o usuário não esteja em risco</div>
-    <div class="campo" onclick="adicionarTexto('Possibilidade de fortalecimento da rede de apoio familiar', 'objetivosMedioPrazo')">Possibilidade de fortalecimento da rede de apoio familiar</div>
-    <div class="campo" onclick="adicionarTexto('Reforçar a adesão ao tratamento e engajamento com as terapias', 'objetivosMedioPrazo')">Reforçar a adesão ao tratamento e engajamento com as terapias</div>
-    <div class="campo" onclick="adicionarTexto('Iniciar o processo de reintegração social e ocupacional, estimulando a participação em grupos de apoio ou atividades comunitárias', 'objetivosMedioPrazo')">Iniciar o processo de reintegração social e ocupacional, estimulando a participação em grupos de apoio ou atividades comunitárias</div>
-    <div class="campo" onclick="adicionarTexto('Desenvolver habilidades sociais e emocionais para lidar com o estresse e a ansiedade sem recorrer ao uso de substâncias', 'objetivosMedioPrazo')">Desenvolver habilidades sociais e emocionais para lidar com o estresse e a ansiedade sem recorrer ao uso de substâncias</div>
-    <div class="campo" onclick="adicionarTexto('Iniciar a inclusão do paciente em programas de reabilitação social e profissional', 'objetivosMedioPrazo')">Iniciar a inclusão do paciente em programas de reabilitação social e profissional</div>
-    <div class="campo" onclick="adicionarTexto('Fomentar a criação de um plano de reabilitação que inclua terapias e apoio social constante', 'objetivosMedioPrazo')">Fomentar a criação de um plano de reabilitação que inclua terapias e apoio social constante</div>
-    <div class="campo" onclick="adicionarTexto('Apoiar a busca de novos objetivos e interesses para a vida do paciente, como estudos ou novas atividades sociais', 'objetivosMedioPrazo')">Apoiar a busca de novos objetivos e interesses para a vida do paciente, como estudos ou novas atividades sociais</div>
+    <div class="campo" onclick="adicionarTexto('Estabilização do quadro psíquico', 'objetivosMedioPrazo')">Estabilização do quadro psíquico</div>
 </div>
 
 <div class="section">
     <h3>Objetivos de Longo Prazo:</h3>
-    <div class="campo" onclick="adicionarTexto('Melhoria na qualidade de vida e bem-estar do usuário', 'objetivosLongoPrazo')">Melhoria na qualidade de vida e bem-estar do usuário</div>
-    <div class="campo" onclick="adicionarTexto('Promoção de autonomia e reintegração social', 'objetivosLongoPrazo')">Promoção de autonomia e reintegração social</div>
-    <div class="campo" onclick="adicionarTexto('Empoderamento do usuário para lidar com os desafios da vida cotidiana', 'objetivosLongoPrazo')">Empoderamento do usuário para lidar com os desafios da vida cotidiana</div>
-    <div class="campo" onclick="adicionarTexto('Inclusão no mercado de trabalho e atividades sociais', 'objetivosLongoPrazo')">Inclusão no mercado de trabalho e atividades sociais</div>
-        <div class="campo" onclick="adicionarTexto('Melhoria na qualidade de vida e bem-estar do usuário', 'objetivosLongoPrazo')">Melhoria na qualidade de vida e bem-estar do usuário</div>
-    <div class="campo" onclick="adicionarTexto('Promoção de autonomia e reintegração social', 'objetivosLongoPrazo')">Promoção de autonomia e reintegração social</div>
-    <div class="campo" onclick="adicionarTexto('Empoderamento do usuário para lidar com os desafios da vida cotidiana', 'objetivosLongoPrazo')">Empoderamento do usuário para lidar com os desafios da vida cotidiana</div>
-    <div class="campo" onclick="adicionarTexto('Inclusão no mercado de trabalho e atividades sociais', 'objetivosLongoPrazo')">Inclusão no mercado de trabalho e atividades sociais</div>
-    <div class="campo" onclick="adicionarTexto('Promoção de saúde mental e bem-estar contínuos', 'objetivosLongoPrazo')">Promoção de saúde mental e bem-estar contínuos</div>
-    <div class="campo" onclick="adicionarTexto('Fortalecimento da resiliência emocional', 'objetivosLongoPrazo')">Fortalecimento da resiliência emocional</div>
-    <div class="campo" onclick="adicionarTexto('Estabelecimento de um estilo de vida saudável e equilibrado', 'objetivosLongoPrazo')">Estabelecimento de um estilo de vida saudável e equilibrado</div>
-    <div class="campo" onclick="adicionarTexto('Manutenção da abstinência ou controle sobre o uso de SPAs', 'objetivosLongoPrazo')">Manutenção da abstinência ou controle sobre o uso de SPAs</div>
-    <div class="campo" onclick="adicionarTexto('Estabilidade financeira e social', 'objetivosLongoPrazo')">Estabilidade financeira e social</div>
-    <div class="campo" onclick="adicionarTexto('Promoção de vínculos saudáveis e apoio contínuo', 'objetivosLongoPrazo')">Promoção de vínculos saudáveis e apoio contínuo</div>
-    <div class="campo" onclick="adicionarTexto('Autonomia na gestão de sua saúde e vida', 'objetivosLongoPrazo')">Autonomia na gestão de sua saúde e vida</div>
-    <div class="campo" onclick="adicionarTexto('Integração contínua em comunidades sociais e profissionais', 'objetivosLongoPrazo')">Integração contínua em comunidades sociais e profissionais</div>
-    <div class="campo" onclick="adicionarTexto('Prevenção de recaídas a longo prazo', 'objetivosLongoPrazo')">Prevenção de recaídas a longo prazo</div>
-    <div class="campo" onclick="adicionarTexto('Garantia de segurança e estabilidade familiar', 'objetivosLongoPrazo')">Garantia de segurança e estabilidade familiar</div>
+    <div class="campo" onclick="adicionarTexto('Abstinência de substâncias psicoativas', 'objetivosLongoPrazo')">Abstinência de substâncias psicoativas</div>
+    <div class="campo" onclick="adicionarTexto('Reinserção social', 'objetivosLongoPrazo')">Reinserção social</div>
 </div>
 
 <div class="resultado" id="resultado">
@@ -185,6 +155,7 @@
 <script>
     // Objeto para armazenar os resultados por categoria
     var resultados = {
+        diagnosticoBiopsicossocial: "",
         questoesPrioritariasAlcool: [],
         questoesPrioritariasMultipla: [],
         questoesPrioritariasVinculos: [],
@@ -209,6 +180,11 @@
 
     function atualizarResultado() {
         var resultadoTexto = "";
+
+        // Adicionar o diagnóstico biopsicossocial, se preenchido
+        if (resultados.diagnosticoBiopsicossocial) {
+            resultadoTexto += "<strong>Diagnóstico Biopsicossocial:</strong> " + resultados.diagnosticoBiopsicossocial + "<br>";
+        }
 
         // Adicionar as questões prioritárias agrupadas sob "QUESTÕES PRIORITÁRIAS"
         var questoesPrioritarias = [
@@ -243,11 +219,18 @@
             resultadoTexto += "<strong>Objetivos de longo prazo:</strong> " + resultados.objetivosLongoPrazo.join(", ") + "<br>";
         }
 
-        // Exibir os resultados na página
-        document.getElementById('textoResultado').innerHTML = resultadoTexto;
-        document.getElementById('resultado').style.display = 'block';
+        // Atualizar a área de resultados com o texto formatado
+        document.getElementById("textoResultado").innerHTML = resultadoTexto;
+        document.getElementById("resultado").style.display = "block";
     }
+
+    // Função para armazenar o diagnóstico biopsicossocial
+    document.getElementById("diagnosticoBiopsicossocial").addEventListener("input", function() {
+        resultados.diagnosticoBiopsicossocial = this.value;
+        atualizarResultado();
+    });
 </script>
 
 </body>
 </html>
+```
