@@ -192,12 +192,17 @@
 
 <div class="resultado" id="resultado">
     <h3>PROJETO TERAPÊUTICO SINGULAR</h3>
-    <p id="textoResultado"></p>
+    <div id="diagnosticoResultado">
+        <h3>DIAGNÓSTICO BIOPSICOSSOCIAL</h3>
+        <p id="textoDiagnostico"></p>
+    </div>
+    <div id="outrosResultados"></div>
 </div>
 
 <script>
     // Objeto para armazenar os resultados por categoria
     var resultados = {
+        diagnosticoBiopsicossocial: '',
         questoesPrioritariasAlcool: [],
         questoesPrioritariasMultipla: [],
         questoesPrioritariasVinculos: [],
@@ -209,12 +214,14 @@
 
     function adicionarTexto(texto, categoria) {
         // Armazenar os resultados por categoria
-        if (!resultados[categoria]) {
-            resultados[categoria] = [];
+        if (categoria === 'diagnosticoBiopsicossocial') {
+            resultados.diagnosticoBiopsicossocial = texto;
+        } else {
+            if (!resultados[categoria]) {
+                resultados[categoria] = [];
+            }
+            resultados[categoria].push(texto);
         }
-        
-        // Adicionar o texto à categoria
-        resultados[categoria].push(texto);
         
         // Atualizar a exibição
         atualizarResultado();
@@ -223,7 +230,10 @@
     function atualizarResultado() {
         var resultadoTexto = "";
 
-        // Adicionar as questões prioritárias agrupadas sob "QUESTÕES PRIORITÁRIAS"
+        // Adicionar o Diagnóstico Biopsicossocial
+        document.getElementById("textoDiagnostico").innerText = resultados.diagnosticoBiopsicossocial;
+
+        // Criar a string de texto com as questões prioritárias
         var questoesPrioritarias = [
             resultados.questoesPrioritariasAlcool,
             resultados.questoesPrioritariasMultipla,
@@ -238,11 +248,11 @@
             questoesAgrupadas = questoesAgrupadas.concat(questoesPrioritarias[i]);
         }
 
-        // Criar a string de texto com todas as questões prioritárias
+        // Criar a string com todas as questões prioritárias
         resultadoTexto += "<strong>QUESTÕES PRIORITÁRIAS:</strong><br>" + questoesAgrupadas.join("<br>");
 
-        // Atualizar o texto no elemento
-        document.getElementById("textoResultado").innerHTML = resultadoTexto;
+        // Adicionar outros resultados
+        document.getElementById("outrosResultados").innerHTML = resultadoTexto;
 
         // Exibir a seção de resultados
         document.getElementById("resultado").style.display = "block";
