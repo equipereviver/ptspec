@@ -44,19 +44,6 @@
             transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
         }
 
-        .campo-texto {
-            width: 100%;
-            height: 200px;
-            padding: 12px;
-            margin: 5px 0;
-            border: 1px solid #a9d18e; /* Borda suave de verde claro */
-            background-color: #e1f5e1; /* Fundo verde claro */
-            border-radius: 8px; /* Cantos arredondados */
-            font-size: 1em;
-            font-family: Arial, sans-serif;
-            resize: none;
-        }
-
         .resultado {
             margin-top: 20px;
             padding: 15px;
@@ -192,21 +179,16 @@
 
 <div class="resultado" id="resultado">
     <h3>PROJETO TERAPÊUTICO SINGULAR</h3>
-    <div id="diagnosticoResultado">
-        <h3>DIAGNÓSTICO BIOPSICOSSOCIAL</h3>
-        <p id="textoDiagnostico"></p>
-    </div>
-    <div id="outrosResultados"></div>
+    <p id="textoResultado"></p>
 </div>
 
 <script>
     // Objeto para armazenar os resultados por categoria
     var resultados = {
-        diagnosticoBiopsicossocial: '',
         questoesPrioritariasAlcool: [],
         questoesPrioritariasMultipla: [],
         questoesPrioritariasVinculos: [],
-        questoesPrioritariasVulnerabilidade: [],
+        questoesPrioritariasVulnerabilidade: [], 
         objetivosCurtoPrazo: [],
         objetivosMedioPrazo: [],
         objetivosLongoPrazo: []
@@ -214,14 +196,12 @@
 
     function adicionarTexto(texto, categoria) {
         // Armazenar os resultados por categoria
-        if (categoria === 'diagnosticoBiopsicossocial') {
-            resultados.diagnosticoBiopsicossocial = texto;
-        } else {
-            if (!resultados[categoria]) {
-                resultados[categoria] = [];
-            }
-            resultados[categoria].push(texto);
+        if (!resultados[categoria]) {
+            resultados[categoria] = [];
         }
+        
+        // Adicionar o texto à categoria
+        resultados[categoria].push(texto);
         
         // Atualizar a exibição
         atualizarResultado();
@@ -230,10 +210,7 @@
     function atualizarResultado() {
         var resultadoTexto = "";
 
-        // Adicionar o Diagnóstico Biopsicossocial
-        document.getElementById("textoDiagnostico").innerText = resultados.diagnosticoBiopsicossocial;
-
-        // Criar a string de texto com as questões prioritárias
+        // Adicionar as questões prioritárias agrupadas sob "QUESTÕES PRIORITÁRIAS"
         var questoesPrioritarias = [
             resultados.questoesPrioritariasAlcool,
             resultados.questoesPrioritariasMultipla,
@@ -247,15 +224,28 @@
         for (var i = 0; i < questoesPrioritarias.length; i++) {
             questoesAgrupadas = questoesAgrupadas.concat(questoesPrioritarias[i]);
         }
+        
+        // Exibir as questões prioritárias, se houver alguma
+        if (questoesAgrupadas.length > 0) {
+            resultadoTexto += "<strong>QUESTÕES PRIORITÁRIAS:</strong> " + questoesAgrupadas.join(", ") + "<br>";
+        }
 
-        // Criar a string com todas as questões prioritárias
-        resultadoTexto += "<strong>QUESTÕES PRIORITÁRIAS:</strong><br>" + questoesAgrupadas.join("<br>");
+        // Exibir os objetivos de curto, médio e longo prazo separadamente
+        if (resultados.objetivosCurtoPrazo.length > 0) {
+            resultadoTexto += "<strong>Objetivos de curto prazo:</strong> " + resultados.objetivosCurtoPrazo.join(", ") + "<br>";
+        }
 
-        // Adicionar outros resultados
-        document.getElementById("outrosResultados").innerHTML = resultadoTexto;
+        if (resultados.objetivosMedioPrazo.length > 0) {
+            resultadoTexto += "<strong>Objetivos de médio prazo:</strong> " + resultados.objetivosMedioPrazo.join(", ") + "<br>";
+        }
 
-        // Exibir a seção de resultados
-        document.getElementById("resultado").style.display = "block";
+        if (resultados.objetivosLongoPrazo.length > 0) {
+            resultadoTexto += "<strong>Objetivos de longo prazo:</strong> " + resultados.objetivosLongoPrazo.join(", ") + "<br>";
+        }
+
+        // Exibir os resultados na página
+        document.getElementById('textoResultado').innerHTML = resultadoTexto;
+        document.getElementById('resultado').style.display = 'block';
     }
 </script>
 
