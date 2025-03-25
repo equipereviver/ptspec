@@ -188,10 +188,15 @@
     <div class="campo" onclick="adicionarTexto('Integração contínua em comunidades sociais e profissionais', 'objetivosLongoPrazo')">Integração contínua em comunidades sociais e profissionais</div>
     <div class="campo" onclick="adicionarTexto('Prevenção de recaídas a longo prazo', 'objetivosLongoPrazo')">Prevenção de recaídas a longo prazo</div>
     <div class="campo" onclick="adicionarTexto('Garantia de segurança e estabilidade familiar', 'objetivosLongoPrazo')">Garantia de segurança e estabilidade familiar</div>
-</div>
-    <div class="form-group">
-    <label for="acaoEstrategia">Ação/Estratégia:</label>
-    <textarea id="acaoEstrategia" name="acaoEstrategia"></textarea>
+    
+<div class="section">
+    <h3>Ação e Estratégia:</h3>
+    <div>
+        <input type="text" id="acao" class="campo-acao" placeholder="Digite a Ação aqui...">
+    </div>
+    <div>
+        <input type="text" id="estrategia" class="campo-estrategia" placeholder="Digite a Estratégia aqui...">
+    </div>
 </div>
 
 <div class="resultado" id="resultado">
@@ -274,6 +279,14 @@
         resultadoDiv.style.display = "block";
     }
 </script>
+    function mostrarResultado() {
+        const resultado = document.querySelector('.resultado');
+        resultado.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
