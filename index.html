@@ -188,11 +188,6 @@
     <div class="campo" onclick="adicionarTexto('Integração contínua em comunidades sociais e profissionais', 'objetivosLongoPrazo')">Integração contínua em comunidades sociais e profissionais</div>
     <div class="campo" onclick="adicionarTexto('Prevenção de recaídas a longo prazo', 'objetivosLongoPrazo')">Prevenção de recaídas a longo prazo</div>
     <div class="campo" onclick="adicionarTexto('Garantia de segurança e estabilidade familiar', 'objetivosLongoPrazo')">Garantia de segurança e estabilidade familiar</div>
-    
-<div class="section">
-    <h3>Ação/Estratégia:</h3>
-    <textarea id="acaoEstrategia" placeholder="Digite as ações ou estratégias aqui..."></textarea>
-    <button onclick="adicionarTextoDoCampo()">Adicionar Ação/Estratégia</button>
 </div>
 
 <div class="resultado" id="resultado">
@@ -275,32 +270,6 @@
         resultadoDiv.style.display = "block";
     }
 </script>
-    function mostrarResultado() {
-        const resultado = document.querySelector('.resultado');
-        resultado.style.display = 'block';
-    }
-</script>
-
-    <div id="resultadoAcoesEstrategias" class="resultado"></div>
-
-<script>
-    function adicionarTextoDoCampo() {
-        var textoCampo = document.getElementById("acaoEstrategia").value;
-        if (textoCampo.trim() !== "") {
-            adicionarTexto(textoCampo, "resultadoAcoesEstrategias");
-            document.getElementById("acaoEstrategia").value = ""; // Limpa o campo após adicionar
-        }
-    }
-
-    function adicionarTexto(texto, id) {
-        let resultado = document.getElementById(id);
-        let novoTexto = document.createElement('p');
-        novoTexto.textContent = texto;
-        resultado.appendChild(novoTexto);
-    }
-</script>
 
 </body>
 </html>
-
-
