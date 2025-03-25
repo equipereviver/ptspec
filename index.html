@@ -8,40 +8,40 @@
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
-            background-color: #fff; /* Fundo branco */
-            color: #333; /* Cor do texto */
+            background-color: #fff;
+            color: #333;
         }
 
         h2, h3 {
-            color: #000; /* Cor preta para todos os títulos */
+            color: #000;
         }
 
         h2 {
             text-align: center;
-            font-weight: bold; /* Título em negrito */
+            font-weight: bold;
             font-size: 1.5em;
         }
 
         h3 {
-            font-weight: bold; /* Títulos das seções em negrito */
-            color: #000; /* Cor preta para os subtítulos */
+            font-weight: bold;
+            color: #000;
         }
 
         .campo {
             padding: 12px;
             margin: 5px;
-            border: 1px solid #a9d18e; /* Borda suave de verde claro */
+            border: 1px solid #a9d18e;
             cursor: pointer;
             display: inline-block;
-            background-color: #e1f5e1; /* Fundo verde claro */
-            border-radius: 8px; /* Cantos arredondados */
+            background-color: #e1f5e1;
+            border-radius: 8px;
             font-size: 1em;
             transition: background-color 0.3s, transform 0.2s;
         }
 
         .campo:hover {
-            background-color: #c8e6c9; /* Cor do fundo ao passar o mouse */
-            transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+            background-color: #c8e6c9;
+            transform: scale(1.05);
         }
 
         .resultado {
@@ -185,6 +185,7 @@
 <script>
     // Objeto para armazenar os resultados por categoria
     var resultados = {
+        diagnosticoBiopsicossocial: "",
         questoesPrioritariasAlcool: [],
         questoesPrioritariasMultipla: [],
         questoesPrioritariasVinculos: [],
@@ -209,6 +210,13 @@
 
     function atualizarResultado() {
         var resultadoTexto = "";
+
+        // Adicionar o Diagnóstico Biopsicossocial
+        var diagnostico = document.getElementById('diagnosticoBiopsicossocial').value;
+        if (diagnostico) {
+            resultados.diagnosticoBiopsicossocial = diagnostico;
+            resultadoTexto += "<strong>Diagnóstico Biopsicossocial:</strong> " + resultados.diagnosticoBiopsicossocial + "<br>";
+        }
 
         // Adicionar as questões prioritárias agrupadas sob "QUESTÕES PRIORITÁRIAS"
         var questoesPrioritarias = [
@@ -243,9 +251,10 @@
             resultadoTexto += "<strong>Objetivos de longo prazo:</strong> " + resultados.objetivosLongoPrazo.join(", ") + "<br>";
         }
 
-        // Exibir os resultados na página
-        document.getElementById('textoResultado').innerHTML = resultadoTexto;
-        document.getElementById('resultado').style.display = 'block';
+        // Exibir o resultado na página
+        var resultadoDiv = document.getElementById("resultado");
+        document.getElementById("textoResultado").innerHTML = resultadoTexto;
+        resultadoDiv.style.display = "block";
     }
 </script>
 
