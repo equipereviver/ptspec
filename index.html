@@ -189,11 +189,10 @@
     <div class="campo" onclick="adicionarTexto('Garantia de segurança e estabilidade familiar', 'objetivosLongoPrazo')">Garantia de segurança e estabilidade familiar</div>
 </div>
 
-
-    <div class="section">
+<div class="section">
     <h3>Ações e estratégias:</h3>
-    <div class="campo" onclick="adicionarTexto('Melhoria na qualidade de vida e bem-estar do usuário', 'objetivosLongoPrazo')">Melhoria na qualidade de vida e bem-estar do usuário</div>
-    <div class="campo" onclick="adicionarTexto('Promoção de autonomia e reintegração social', 'objetivosLongoPrazo')">Promoção de autonomia e reintegração social</div>
+    <div class="campo" onclick="adicionarTexto('Melhoria na qualidade de vida e bem-estar do usuário', 'acoesEEstrategias')">Melhoria na qualidade de vida e bem-estar do usuário</div>
+    <div class="campo" onclick="adicionarTexto('Promoção de autonomia e reintegração social', 'acoesEEstrategias')">Promoção de autonomia e reintegração social</div>
 </div>
 
 <div class="resultado" id="resultado">
@@ -202,83 +201,65 @@
 </div>
 
 <script>
-    // Objeto para armazenar os resultados por categoria
     var resultados = {
         diagnosticoBiopsicossocial: "",
         questoesPrioritariasAlcool: [],
         questoesPrioritariasMultipla: [],
         questoesPrioritariasVinculos: [],
-        questoesPrioritariasVulnerabilidade: [], 
+        questoesPrioritariasVulnerabilidade: [],
         objetivosCurtoPrazo: [],
         objetivosMedioPrazo: [],
         objetivosLongoPrazo: [],
-        açoesEEstrategias: []
+        acoesEEstrategias: []
     };
 
     function adicionarTexto(texto, categoria) {
-        // Armazenar os resultados por categoria
         if (!resultados[categoria]) {
             resultados[categoria] = [];
         }
-        
-        // Adicionar o texto à categoria
+
         resultados[categoria].push(texto);
-        
-        // Atualizar a exibição
         atualizarResultado();
     }
 
     function atualizarResultado() {
         var resultadoTexto = "";
 
-        // Adicionar o Diagnóstico Biopsicossocial
         var diagnostico = document.getElementById('diagnosticoBiopsicossocial').value;
         if (diagnostico) {
             resultados.diagnosticoBiopsicossocial = diagnostico;
-            resultadoTexto += "<strong>Diagnóstico Biopsicossocial:</strong> " + resultados.diagnosticoBiopsicossocial + "<br>";
+            resultadoTexto += "<strong>Diagnóstico Biopsicossocial:</strong> " + resultados.diagnosticoBiopsicossocial + "<br><br>";
         }
 
-        // Adicionar as questões prioritárias agrupadas sob "QUESTÕES PRIORITÁRIAS"
-        var questoesPrioritarias = [
+        var questoesAgrupadas = [].concat(
             resultados.questoesPrioritariasAlcool,
             resultados.questoesPrioritariasMultipla,
             resultados.questoesPrioritariasVinculos,
             resultados.questoesPrioritariasVulnerabilidade
-        ];
+        );
 
-        var questoesAgrupadas = [];
-        
-        // Agrupar todas as questões prioritárias
-        for (var i = 0; i < questoesPrioritarias.length; i++) {
-            questoesAgrupadas = questoesAgrupadas.concat(questoesPrioritarias[i]);
-        }
-        
-        // Exibir as questões prioritárias, se houver alguma
         if (questoesAgrupadas.length > 0) {
-            resultadoTexto += "<strong>QUESTÕES PRIORITÁRIAS:</strong> " + questoesAgrupadas.join(", ") + "<br>";
+            resultadoTexto += "<strong>QUESTÕES PRIORITÁRIAS:</strong> " + questoesAgrupadas.join(", ") + "<br><br>";
         }
 
-        // Exibir os objetivos de curto, médio e longo prazo separadamente
         if (resultados.objetivosCurtoPrazo.length > 0) {
-            resultadoTexto += "<strong>Objetivos de curto prazo:</strong> " + resultados.objetivosCurtoPrazo.join(", ") + "<br>";
+            resultadoTexto += "<strong>Objetivos de curto prazo:</strong> " + resultados.objetivosCurtoPrazo.join(", ") + "<br><br>";
         }
 
         if (resultados.objetivosMedioPrazo.length > 0) {
-            resultadoTexto += "<strong>Objetivos de médio prazo:</strong> " + resultados.objetivosMedioPrazo.join(", ") + "<br>";
+            resultadoTexto += "<strong>Objetivos de médio prazo:</strong> " + resultados.objetivosMedioPrazo.join(", ") + "<br><br>";
         }
 
         if (resultados.objetivosLongoPrazo.length > 0) {
-            resultadoTexto += "<strong>Objetivos de longo prazo:</strong> " + resultados.objetivosLongoPrazo.join(", ") + "<br>";
+            resultadoTexto += "<strong>Objetivos de longo prazo:</strong> " + resultados.objetivosLongoPrazo.join(", ") + "<br><br>";
         }
 
-           if (resultados.açoesEestragegias.length > 0) {
-            resultadoTexto += "<strong>Ações e estratégias:</strong> " + resultados.açoeseestrategias.join(", ") + "<br>";
+        if (resultados.acoesEEstrategias.length > 0) {
+            resultadoTexto += "<strong>Ações e estratégias:</strong> " + resultados.acoesEEstrategias.join(", ") + "<br><br>";
         }
 
-        // Exibir o resultado na página
-        var resultadoDiv = document.getElementById("resultado");
         document.getElementById("textoResultado").innerHTML = resultadoTexto;
-        resultadoDiv.style.display = "block";
+        document.getElementById("resultado").style.display = "block";
     }
 </script>
 
