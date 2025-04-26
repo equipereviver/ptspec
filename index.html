@@ -5,27 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Terapêutico Singular</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #fff;
-            color: #333;
-        }
+       body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 40px;
+    line-height: 1.6;
+}
 
-        h2, h3 {
-            color: #000;
-        }
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
 
-        h2 {
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.5em;
-        }
+h3 {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
 
-        h3 {
-            font-weight: bold;
-            color: #000;
-        }
+.section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.campo {
+    background-color: #e8f5e9;
+    border: 1px solid #a9d18e;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin: 6px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.campo:hover {
+    background-color: #c8e6c9;
+    transform: scale(1.03);
+}
+
+.campo-texto {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 1em;
+    margin-top: 8px;
+}
+
+.resultado {
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.resultado h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: #2c3e50;
+}
 
         .campo {
             padding: 12px;
