@@ -317,6 +317,12 @@ var resultados = {
     function atualizarResultado() {
         var resultadoTexto = "";
 
+        var diagnostico = document.getElementById('diagnosticoBiopsicossocial').value;
+        if (diagnostico) {
+            resultados.diagnosticoBiopsicossocial = diagnostico;
+            resultadoTexto += "<strong>Diagnóstico Biopsicossocial:</strong> " + resultados.diagnosticoBiopsicossocial + "<br><br>";
+        }
+        
         // Responsáveis pelo Projeto
 var responsaveis = document.getElementById('responsaveisProjeto').value;
 if (responsaveis) {
@@ -324,12 +330,6 @@ if (responsaveis) {
     resultadoTexto += "<strong>Responsáveis pelo Projeto Terapêutico:</strong><br>" + responsaveis + "<br><br>";
 }
 
-
-        var diagnostico = document.getElementById('diagnosticoBiopsicossocial').value;
-        if (diagnostico) {
-            resultados.diagnosticoBiopsicossocial = diagnostico;
-            resultadoTexto += "<strong>Diagnóstico Biopsicossocial:</strong> " + resultados.diagnosticoBiopsicossocial + "<br><br>";
-        }
 
         var questoesAgrupadas = [].concat(
             resultados.questoesPrioritariasAlcool,
