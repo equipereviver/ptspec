@@ -307,43 +307,71 @@ h3 {
 
 <script>
 var resultados = {
-     diagnosticoBiopsicossocial: "",
-        questoesPrioritariasAlcool: [],
-        questoesPrioritariasMultipla: [],
-        questoesPrioritariasVinculos: [],
-        questoesPrioritariasVulnerabilidade: [],
-        objetivosCurtoPrazo: [],
-        objetivosMedioPrazo: [],
-        objetivosLongoPrazo: [],
-        acoesEEstrategias: [],
-        responsaveisProjeto: ""
-    };
-
+       diagnosticoBiopsicossocial: "",
+    questoesPrioritariasAlcool: [],
+    questoesPrioritariasMultipla: [],
+    questoesPrioritariasVinculos: [],
+    questoesPrioritariasVulnerabilidade: [],
+    objetivosCurtoPrazo: [],
+    objetivosMedioPrazo: [],
+    objetivosLongoPrazo: [],
+    acoesEEstrategias: [],
+    responsaveisProjeto: "" // ← nova chave
+};
     function adicionarTexto(texto, categoria) {
-        if (!resultados[categoria].includes(texto)) {
-            resultados[categoria].push(texto);
+        if (!resultados[categoria]) {
+            resultados[categoria] = [];
         }
+
+        resultados[categoria].push(texto);
         atualizarResultado();
     }
 
     function atualizarResultado() {
-        resultados.diagnosticoBiopsicossocial = document.getElementById('diagnosticoBiopsicossocial').value;
-        resultados.responsaveisProjeto = document.getElementById('responsaveisProjeto').value;
+        var resultadoTexto = "";
 
-        var textoFinal = `
-            <strong>Diagnóstico Biopsicossocial:</strong><br>${resultados.diagnosticoBiopsicossocial}<br><br>
-            <strong>Questões Prioritárias - Álcool:</strong><br>${resultados.questoesPrioritariasAlcool.join(", ")}<br><br>
-            <strong>Questões Prioritárias - Múltiplas SPAs:</strong><br>${resultados.questoesPrioritariasMultipla.join(", ")}<br><br>
-            <strong>Questões Prioritárias - Vínculos:</strong><br>${resultados.questoesPrioritariasVinculos.join(", ")}<br><br>
-            <strong>Questões Prioritárias - Vulnerabilidade:</strong><br>${resultados.questoesPrioritariasVulnerabilidade.join(", ")}<br><br>
-            <strong>Objetivos de Curto Prazo:</strong><br>${resultados.objetivosCurtoPrazo.join(", ")}<br><br>
-            <strong>Objetivos de Médio Prazo:</strong><br>${resultados.objetivosMedioPrazo.join(", ")}<br><br>
-            <strong>Objetivos de Longo Prazo:</strong><br>${resultados.objetivosLongoPrazo.join(", ")}<br><br>
-            <strong>Ações e Estratégias:</strong><br>${resultados.acoesEEstrategias.join(", ")}<br><br>
-            <strong>Responsáveis pelo Projeto:</strong><br>${resultados.responsaveisProjeto}
-        `;
+        var diagnostico = document.getElementById('diagnosticoBiopsicossocial').value;
+        if (diagnostico) {
+            resultados.diagnosticoBiopsicossocial = diagnostico;
+            resultadoTexto += "<strong>Diagnóstico Biopsicossocial:</strong> " + resultados.diagnosticoBiopsicossocial + "<br><br>";
+        }
+        
+        // Responsáveis pelo Projeto
+var responsaveis = document.getElementById('responsaveisProjeto').value;
+if (responsaveis) {
+    resultados.responsaveisProjeto = responsaveis;
+    resultadoTexto += "<strong>Responsáveis pelo Projeto Terapêutico Singular:</strong><br>" + responsaveis + "<br><br>";
+}
 
-        document.getElementById("textoResultado").innerHTML = textoFinal;
+
+        var questoesAgrupadas = [].concat(
+            resultados.questoesPrioritariasAlcool,
+            resultados.questoesPrioritariasMultipla,
+            resultados.questoesPrioritariasVinculos,
+            resultados.questoesPrioritariasVulnerabilidade
+        );
+
+        if (questoesAgrupadas.length > 0) {
+            resultadoTexto += "<strong>QUESTÕES PRIORITÁRIAS:</strong> " + questoesAgrupadas.join(", ") + "<br><br>";
+        }
+
+        if (resultados.objetivosCurtoPrazo.length > 0) {
+            resultadoTexto += "<strong>Objetivos de curto prazo:</strong> " + resultados.objetivosCurtoPrazo.join(", ") + "<br><br>";
+        }
+
+        if (resultados.objetivosMedioPrazo.length > 0) {
+            resultadoTexto += "<strong>Objetivos de médio prazo:</strong> " + resultados.objetivosMedioPrazo.join(", ") + "<br><br>";
+        }
+
+        if (resultados.objetivosLongoPrazo.length > 0) {
+            resultadoTexto += "<strong>Objetivos de longo prazo:</strong> " + resultados.objetivosLongoPrazo.join(", ") + "<br><br>";
+        }
+
+        if (resultados.acoesEEstrategias.length > 0) {
+            resultadoTexto += "<strong>Ações e estratégias:</strong> " + resultados.acoesEEstrategias.join(", ") + "<br><br>";
+        }
+
+        document.getElementById("textoResultado").innerHTML = resultadoTexto;
         document.getElementById("resultado").style.display = "block";
     }
 </script>
