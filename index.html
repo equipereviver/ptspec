@@ -342,10 +342,7 @@ if (responsaveis) {
     resultados.responsaveisProjeto = responsaveis;
     resultadoTexto += "<strong>Responsáveis pelo Projeto Terapêutico Singular:</strong><br>" + responsaveis + "<br><br>";
 }
-
-
-<button onclick="atualizarResultado()">Gerar Projeto</button>   
-        
+ 
         var questoesAgrupadas = [].concat(
             resultados.questoesPrioritariasAlcool,
             resultados.questoesPrioritariasMultipla,
@@ -377,6 +374,8 @@ if (responsaveis) {
         document.getElementById("resultado").style.display = "block";
     }
 </script>
+    
+<button onclick="atualizarResultado()">Gerar Projeto</button>  
     
 </body>
 </html>
