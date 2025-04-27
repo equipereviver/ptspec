@@ -215,20 +215,6 @@ h3 {
     <div class="campo" onclick="adicionarTexto('Desenvolvimento de estratégias de conscientização comunitária', 'questoesPrioritariasVulnerabilidade')">Desenvolvimento de estratégias de conscientização comunitária</div>
 </div>
 
-    <div class="section">
-    <h3>Questões Prioritárias para usuários vinculados, com boa adesão a proposta terapêutica:</h3>
-
-    <div class="campo" onclick="adicionarTexto('Manutenção de adesão ao tratamento', 'questoesPrioritariasAdesao')">Manutenção de adesão ao tratamento</div>
-    <div class="campo" onclick="adicionarTexto('Desenvolvimento de habilidades de autocuidado', 'questoesPrioritariasAdesao')">Desenvolvimento de habilidades de autocuidado</div>
-    <div class="campo" onclick="adicionarTexto('Promoção da autonomia e independência', 'questoesPrioritariasAdesao')">Promoção da autonomia e independência</div>
-    <div class="campo" onclick="adicionarTexto('Apoio psicoterapêutico continuado', 'questoesPrioritariasAdesao')">Apoio psicoterapêutico continuado</div>
-    <div class="campo" onclick="adicionarTexto('Participação em atividades terapêuticas em grupo', 'questoesPrioritariasAdesao')">Participação em atividades terapêuticas em grupo</div>
-    <div class="campo" onclick="adicionarTexto('Promoção de habilidades sociais e interpessoais', 'questoesPrioritariasAdesao')">Promoção de habilidades sociais e interpessoais</div>
-    <div class="campo" onclick="adicionarTexto('Gestão do estresse e ensiedade', 'questoesPrioritariasAdesao')">Gestão do estresse e ansiedade</div>
-    <div class="campo" onclick="adicionarTexto('Manutenção de estabilidade emocional', 'questoesPrioritariasAdesao')">Manutenção de estabilidade emocional</div>
-
-</div>
-
 <div class="section">
     <h3>Objetivos de Curto Prazo:</h3>
     
@@ -339,7 +325,6 @@ var resultados = {
     questoesPrioritariasMultipla: [],
     questoesPrioritariasVinculos: [],
     questoesPrioritariasVulnerabilidade: [],
-    questoesPrioritariasAdesao:  [],
     objetivosCurtoPrazo: [],
     objetivosMedioPrazo: [],
     objetivosLongoPrazo: [],
@@ -376,7 +361,7 @@ if (responsaveis) {
             resultados.questoesPrioritariasMultipla,
             resultados.questoesPrioritariasVinculos,
             resultados.questoesPrioritariasVulnerabilidade
-            resultados.questoesPrioritariasAdesao,
+
         );
 
         if (questoesAgrupadas.length > 0) {
