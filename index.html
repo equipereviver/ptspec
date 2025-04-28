@@ -127,7 +127,7 @@ h3 {
         resize: vertical; /* Permite redimensionar a caixa de texto apenas na direção vertical */
     }
 </style>
-    <h3>Diagnóstico Biopsicossocial:</h3>
+    <h3>Diagnóstico Biopsicossocial (exemplo: uso abusivo de cocaína com implicações no trabalho, exposição a violências e piora no auto cuidado)</h3>
     <textarea class="campo-texto" id="diagnosticoBiopsicossocial" placeholder="Digite o diagnóstico biopsicossocial aqui..."></textarea>
 </div>
 
@@ -353,7 +353,7 @@ var resultados = {
 var responsaveis = document.getElementById('responsaveisProjeto').value;
 if (responsaveis) {
     resultados.responsaveisProjeto = responsaveis;
-    resultadoTexto += "<strong>Responsáveis pelo Projeto Terapêutico Singular:</strong><br>" + responsaveis + "<br><br>";
+    resultadoTexto += "<strong>Responsáveis pelo Projeto Terapêutico Singular (clicar em gerar projeto no final para aparecer os responsáveis)</strong><br>" + responsaveis + "<br><br>";
 }
  
         var questoesAgrupadas = [].concat(
